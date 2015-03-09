@@ -15,11 +15,11 @@ namespace ImgurImageDeleter
             };
             
             // Pass the images array to the DeleteMultiple images.
-            var deletionResult = Imgur.DeleteMultiple(images).Result;
+            var deletionResults = Imgur.DeleteMultiple(images).Result;
 
             // Loop through all the deletion results and 
             // list the Id along with the status of the deletion.
-            foreach (var result in deletionResult)
+            foreach (var result in deletionResults)
                 Console.WriteLine("ImageId: {0}\r\nSuccess: {1}",
                                    result.TargetImage.Id,
                                    result.Success);

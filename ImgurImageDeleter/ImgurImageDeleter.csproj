@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\ShareXHistoryReader.cs" />
     <Compile Include="Model\DeletionResult.cs" />
     <Compile Include="Model\Image.cs" />
     <Compile Include="Helpers\Imgur.cs" />

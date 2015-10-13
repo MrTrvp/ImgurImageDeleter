@@ -3,6 +3,11 @@
     public class Image
     {
         /// <summary>
+        /// Url used to upload an image to.
+        /// </summary>
+        public const string DeletionUrl = "http://imgur.com/delete/";
+        
+        /// <summary>
         /// The current id of the image.
         /// </summary>
         public string Id { get; private set; }
@@ -19,7 +24,7 @@
         public Image(string deletionToken)
         {
             Id = string.Empty;
-            DeletionUrl = "http://imgur.com/delete/" + deletionToken;
+            DeletionUrl = string.Concat(DeletionUrl, deletionToken);
         }
 
         /// <summary>
@@ -30,7 +35,7 @@
         public Image(string imageId, string deletionToken)
         {
             Id = imageId;
-            DeletionUrl = "http://imgur.com/delete/" + deletionToken;
+            DeletionUrl = string.Concat(DeletionUrl, deletionToken);
         }
     }
 }
